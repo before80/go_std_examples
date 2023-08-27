@@ -22,6 +22,7 @@ func (mr *MyReader1) WriteTo(w io.Writer) (n int64, err error) {
 	fmt.Println("调用了MyReader1的WriteTo方法")
 
 	data := make([]byte, mr.R.Size())
+	mr.R.Read(data)
 	//fmt.Println(mr.Read(data))
 	//fmt.Println("data=", string(data))
 	//fmt.Println(reflect.TypeOf(w).String())
