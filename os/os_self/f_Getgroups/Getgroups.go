@@ -42,3 +42,8 @@ func main() {
 //lx@DESKTOP-2OAUARV:~/goprojects/go_std_examples/os/os_self/f_Getgroups$ sudo ./Getgroups
 //[sudo] password for lx:
 //当前进程（或调用者）的组ID列表：[]int{0}
+
+// Output:
+//PS F:\Devs\MyCodes\go_std_examples\os\os_self\f_Getgroups> go run .\Getgroups.go
+//2023/08/28 17:01:21 getgroups: not supported by windows
+//exit status 1
