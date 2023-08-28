@@ -7,7 +7,7 @@ import (
 
 func main() {
 	// 打开文件
-	file, err := os.OpenFile("data.txt", os.O_CREATE|os.O_WRONLY, 0622)
+	file, err := os.OpenFile("data.txt", os.O_CREATE|os.O_WRONLY, 0644)
 	if err != nil {
 		fmt.Println("打开文件失败：", err)
 		return
@@ -38,3 +38,8 @@ func main() {
 	}
 	fmt.Println("修改后的文件权限：", fileInfo.Mode().String())
 }
+
+// Output:
+//当前文件权限： -rw-r--r--
+//文件权限修改成功！
+//修改后的文件权限： -rwxr-xr-x
