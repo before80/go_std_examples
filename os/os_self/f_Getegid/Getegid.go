@@ -7,7 +7,7 @@ import (
 
 func main() {
 	// 当前用户是 lx
-	fmt.Println("当前进程（或调用者）的有效组ID：", os.Getegid()) // 1000
+	fmt.Println("当前进程（或调用者）的有效组ID：", os.Getegid())
 }
 
 // Output:
