@@ -46,13 +46,13 @@ func main() {
 	x := 2
 	fmt.Printf("%v,%T\n", unsafe.Sizeof(uintptr(x)), uintptr(x)) // 8,uintptr
 
-	fmt.Println("array -> []int-------------")
-	var arrI0 []int
-	arrI1 := []int{1}
-	arrI2 := []int{1, 2}
-	fmt.Printf("%v,%T\n", unsafe.Sizeof(arrI0), arrI0) //24,[]int
-	fmt.Printf("%v,%T\n", unsafe.Sizeof(arrI1), arrI1) //24,[]int
-	fmt.Printf("%v,%T\n", unsafe.Sizeof(arrI2), arrI2) //24,[]int
+	fmt.Println("array -> [1]int [2]int-------------")
+	var arrI0 [1]int
+	arrI1 := [1]int{1}
+	arrI2 := [2]int{1, 2}
+	fmt.Printf("%v,%T\n", unsafe.Sizeof(arrI0), arrI0) //8,[1]int
+	fmt.Printf("%v,%T\n", unsafe.Sizeof(arrI1), arrI1) //8,[1]int
+	fmt.Printf("%v,%T\n", unsafe.Sizeof(arrI2), arrI2) //16,[2]int
 
 	fmt.Println("array -> []string-------------")
 	var arrStr0 []string
@@ -108,45 +108,3 @@ func main() {
 	mis2[2] = "b"
 	fmt.Printf("%v,%T\n", unsafe.Sizeof(mis2), mis2) //8,map[int]string
 }
-
-// Output:
-//struct byte int32-------------
-//8,main.MyStruct1
-//struct byte int64-------------
-//16,main.MyStruct2
-//struct byte struct 1-------------
-//24,main.MyStruct3
-//struct byte struct 2-------------
-//24,main.MyStruct4
-//uintptr-------------
-//8,uintptr
-//array -> []int-------------
-//24,[]int
-//24,[]int
-//24,[]int
-//array -> []string-------------
-//24,[]string
-//24,[]string
-//24,[]string
-//slice -> []int-------------
-//24,[]int
-//24,[]int
-//24,[]int
-//slice -> []string-------------
-//24,[]string
-//24,[]string
-//24,[]string
-//string-------------
-//16,string
-//16,string
-//16,string
-//map[string]int-------------
-//8,map[string]int
-//8,map[string]int
-//8,map[string]int
-//8,map[string]int
-//map[int]string-------------
-//8,map[int]string
-//8,map[int]string
-//8,map[int]string
-//8,map[int]string
