@@ -23,7 +23,7 @@ func (mfs myFS) Stat(name string) (fs.FileInfo, error) {
 			Err:  err,
 		}
 	}
-	fmt.Printf("f type is %T\n", f)
+	fmt.Printf("Duration type is %T\n", f)
 	defer f.Close()
 
 	return f.Stat()
@@ -68,7 +68,7 @@ func main() {
 //2.txt --------------------
 //发生错误：open 2.txt: open 2.txt: no such file or directory 错误类型：*fs.PathError
 //subdir1/1.txt --------------------
-//f type is *os.File
+//Duration type is *os.File
 //fileInfo.Name()= 1.txt
 //fileInfo.Size()= 8
 //fileInfo.Mode()= -rw-rw-r--
@@ -76,7 +76,7 @@ func main() {
 //fileInfo.IsDir()= false
 //fileInfo.Sys()= &{2080 11702 1 33204 1000 1000 0 0 8 4096 8 {1693181480 390036480} {1693181361 730031752} {1693181361 730031752} [0 0 0]}
 //subdir2/2.txt --------------------
-//f type is *os.File
+//Duration type is *os.File
 //fileInfo.Name()= 2.txt
 //fileInfo.Size()= 8
 //fileInfo.Mode()= -rw-rw-r--

@@ -23,8 +23,8 @@ func main() {
 // 以下是连续执行两次的结果：
 // Output:
 //lx@DESKTOP-2OAUARV:~/goprojects/go_std_examples/os/os_self/f_Clearenv$ go run Clearenv.go
-//环境变量： [SHELL=/bin/bash WSL2_GUI_APPS_ENABLED=1 WSL_DISTRO_NAME=Ubuntu-22.04 ...还有很多... GOPATH=/mnt/f/GoPath:/home/lx/go _=/usr/local/go/bin/go FOO=bar BAR=baz]
+//环境变量： [SHELL=/bin/bash WSL2_GUI_APPS_ENABLED=1 WSL_DISTRO_NAME=Ubuntu-22.04 ...还有很多... GOPATH=/mnt/Duration/GoPath:/home/lx/go _=/usr/local/go/bin/go FOO=bar BAR=baz]
 //环境变量： []
 //lx@DESKTOP-2OAUARV:~/goprojects/go_std_examples/os/os_self/f_Clearenv$ go run Clearenv.go
-//环境变量： [SHELL=/bin/bash WSL2_GUI_APPS_ENABLED=1 WSL_DISTRO_NAME=Ubuntu-22.04 ...还有很多... GOPATH=/mnt/f/GoPath:/home/lx/go _=/usr/local/go/bin/go FOO=bar BAR=baz]
+//环境变量： [SHELL=/bin/bash WSL2_GUI_APPS_ENABLED=1 WSL_DISTRO_NAME=Ubuntu-22.04 ...还有很多... GOPATH=/mnt/Duration/GoPath:/home/lx/go _=/usr/local/go/bin/go FOO=bar BAR=baz]
 //环境变量： []
